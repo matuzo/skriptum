@@ -1,1 +1,5 @@
-exclude: ['bower_components', 'node_modules']
+exclude: ['node_modules']
+
+collections:
+  skriptum:
+    output: true

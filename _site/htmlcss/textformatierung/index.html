@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 	<meta charset="UTF-8">
-	<title>Skriptum - Startseite </title>
+	<title>Skriptum - text-transform (Schrifttransformation) </title>
 
 	<!-- build:css assets/style.css -->
 		<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
@@ -47,19 +47,21 @@
 
 	<div class="container">
 
+	<h2 id="text-transform-schrifttransformation">text-transform (Schrifttransformation)</h2>
 
-	<div class="row">
-	<div class="col-sm-4">
+<p>Darstellung von Text in Klein- oder Großbuchstaben</p>
 
-		<div class="list-group">
-			<h3 >HTML/CSS</h3>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span>
+  <span class="k">text-transform</span><span class="o">:</span> <span class="k">uppercase</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
 
-			<a href="htmlcss/textformatierung/#" class="list-group-item">
-			Textformatierung
-			</a>
-		</div>
-	</div>
-</div>
+<p><strong>none (Standardwert)</strong> - Das Wort wir normal dargestellt.</p>
+
+<p><strong>capitalize</strong> - Der erste Buchstabe wird groß dargestellt Vorher: wort text-transform:capitalize;</p>
+
+<p><strong>uppercase</strong> - Alle Buchstaben werden groß dargestellt</p>
+
+<p><strong>lowercase</strong> - Alle Buchstaben werden klein dargestellt</p>
 
 	</div> <!-- /.container -->
 
