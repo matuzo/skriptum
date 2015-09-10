@@ -1,0 +1,19 @@
+{
+  "name": "skriptum",
+  "version": "0.0.0",
+  "homepage": "https://github.com/matuzo/skriptum",
+  "authors": [
+    "matuzo <manuel@matuzo.at>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}
