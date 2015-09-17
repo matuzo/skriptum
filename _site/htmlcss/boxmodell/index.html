@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<title>Skriptum - Box-Modell </title>
+
+		<link rel="stylesheet" href="/skriptum/assets/style.min.css">
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<a class="navbar-brand" href="/skriptum/">Skriptum</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CSS <span class="caret"></span></a>
+						
+						<ul class="dropdown-menu">
+							<li><a href="/skriptum/htmlcss/textformatierung/">Textformatierung</a></li>
+							<li><a href="/skriptum/htmlcss/boxmodell/">Box-Modell</a></li>
+						</ul>
+					</li>
+					<!-- <li><a href="#contact">Links</a></li> -->
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<div class="container">
+
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<h1 id="box-modell">Box-Modell</h1>
+
+<h2 id="allgemeines">Allgemeines</h2>
+
+<p>Das Box-Modell legt fest wie sich Blocklevel-Elemente hinsichtlich ihrer Breite und Höhe verhalten und wie Innen- und Außenabstand und Rahmen interpretiert werden. Das Verständnis des Box-Modells ist essenziell für das grundsätzliche Layouting in CSS.</p>
+
+<p>Die Eigenschaft width eines Elements bezieht sich auf die Breite seines Inhalts. Zu dieser Breite werden noch Innenabstand und Rahmen addiert. Somit ergeben Breite, Innenabstand und Rahmen die Gesamtbreite des Elements.</p>
+
+<p><img src="/skriptum//images/boxmodell.jpg" class="img-responsive" alt="Box-Modell" /></p>
+
+<h2 id="width-breite">width (Breite)</h2>
+
+<p>Die Breite eines Elements kann mit relativen oder absoluten Zahl- oder Prozentwerten (Prozentwerte beziehen sich auf die Breite des Elternelements) definiert werden. Der Standartwert für die Breite eines Elements ist ‘auto’. width kann nur auf Blocklevelelemente angewendet werden.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span> 
+  <span class="k">width</span><span class="o">:</span><span class="m">200px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h2 id="min-width">min-width</h2>
+
+<p>Gibt die minimale Breite eines Elements an.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span> 
+  <span class="k">min-width</span><span class="o">:</span><span class="m">200px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h2 id="max-width">max-width</h2>
+
+<p>Gibt die maximale Breite eines Elements an. (Funktioniert nicht in IE6)</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span> 
+  <span class="k">max-width</span><span class="o">:</span><span class="m">200px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h2 id="margin-aussenabstand">margin (Aussenabstand)</h2>
+
+<p>margin gibt den Aussenabstand eines Elementes an. Der Abstand kann relativ oder absolut angegeben werden und auch mit negativen Werten.</p>
+
+<h3 id="jede-seite-einzeln-definieren">Jede Seite einzeln definieren</h3>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span> 
+  <span class="k">margin-top</span><span class="o">:</span><span class="m">10px</span><span class="p">;</span>
+  <span class="k">margin-right</span><span class="o">:</span><span class="m">10px</span><span class="p">;</span>
+  <span class="k">margin-bottom</span><span class="o">:</span><span class="m">10px</span><span class="p">;</span>
+  <span class="k">margin-left</span><span class="o">:</span><span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="jede-seite-einzeln-definieren-1">Jede Seite einzeln definieren</h3>
+<p>Kurzschreibweise in der Reihenfolge: top / right / bottom / left</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span> 
+  <span class="k">margin</span><span class="o">:</span><span class="m">10px</span> <span class="m">20px</span> <span class="m">40px</span> <span class="m">30px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="ein-wert-fr-alle-seiten">Ein Wert für alle Seiten</h3>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span> 
+  <span class="k">margin</span><span class="o">:</span><span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="ein-wert-fr-oben-und-unten-und-ein-wert-fr-links-und-rechts">Ein Wert für oben und unten und ein Wert für links und rechts</h3>
+<p>margin: top und bottom / left und right</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span> 
+  <span class="k">margin</span><span class="o">:</span><span class="m">10px</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="ein-wert-fr-oben-einer-fr-links-und-rechts-und-einer-fr-unten">Ein Wert für oben, einer für links und rechts und einer für unten</h3>
+<p>margin: top / left und right / bottom</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span> 
+  <span class="k">margin</span><span class="o">:</span><span class="m">10px</span> <span class="m">30px</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h2 id="padding-innenabstand">padding (Innenabstand)</h2>
+
+<p>padding gibt den Innenabstand eines Elementes an. Der Abstand kann relativ oder absolut angegeben werden und ausschließlich mit positiven Werten.</p>
+
+<h3 id="jede-seite-einzeln-definieren-2">Jede Seite einzeln definieren</h3>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span> 
+  <span class="k">padding-top</span><span class="o">:</span><span class="m">10px</span><span class="p">;</span>
+  <span class="k">padding-right</span><span class="o">:</span><span class="m">10px</span><span class="p">;</span>
+  <span class="k">padding-bottom</span><span class="o">:</span><span class="m">10px</span><span class="p">;</span>
+  <span class="k">padding-left</span><span class="o">:</span><span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="jede-seite-einzeln-definieren-3">Jede Seite einzeln definieren</h3>
+<p>Kurzschreibweise in der Reihenfolge: top / right / bottom / left</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span> 
+  <span class="k">padding</span><span class="o">:</span><span class="m">10px</span> <span class="m">20px</span> <span class="m">40px</span> <span class="m">30px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="ein-wert-fr-alle-seiten-1">Ein Wert für alle Seiten</h3>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span> 
+  <span class="k">padding</span><span class="o">:</span><span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="ein-wert-fr-oben-und-unten-und-ein-wert-fr-links-und-rechts-1">Ein Wert für oben und unten und ein Wert für links und rechts</h3>
+<p>padding: top und bottom / left und right</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span> 
+  <span class="k">padding</span><span class="o">:</span><span class="m">10px</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="ein-wert-fr-oben-einer-fr-links-und-rechts-und-einer-fr-unten-1">Ein Wert für oben, einer für links und rechts und einer für unten</h3>
+<p>padding: top / left und right / bottom)</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span> 
+  <span class="k">padding</span><span class="o">:</span><span class="m">10px</span> <span class="m">30px</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+
+		</div>
+	</div>
+	</div> <!-- /.container -->
+
+	<script src="/skriptum/assets/script.min.js"></script>
+
+</body>
+</html>

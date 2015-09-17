@@ -1,14 +1,14 @@
 ---
 layout: skriptum
-title: text-transform (Schrifttransformation)
+title: Textformatierung
 permalink: /htmlcss/textformatierung/
 ---
+#Textformatierung
+
 
 ## text-transform (Schrifttransformation)
 
 Darstellung von Text in Klein- oder Großbuchstaben
-
-
 
 {% highlight css %}
 p {
