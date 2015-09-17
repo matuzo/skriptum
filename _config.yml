@@ -3,3 +3,5 @@ exclude: ['node_modules']
 collections:
   skriptum:
     output: true
+
+baseurl: /skriptum/
