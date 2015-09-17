@@ -1,11 +1,25 @@
 var gulp = require('gulp'),
-	usemin = require('gulp-usemin'),
-	uglify = require('gulp-uglify'),
 	minifyCss = require('gulp-minify-css'),
-	rename = require("gulp-rename");
+	concat = require('gulp-concat'),
+	uglify = require('gulp-uglify');
 
-gulp.task('usemin', function() {
-	return gulp.src('_site/index.html')
-	.pipe(usemin())
-	.pipe(gulp.dest('_site'));
+gulp.task('mincss', function() {
+  return gulp.src(['assets/style.css', 'bower_components/bootstrap/dist/css/bootstrap.css'])
+    .pipe(concat('style.min.css'))
+    .pipe(minifyCss({'keepSpecialComments': 0}))
+    .pipe(gulp.dest('assets'));
+});
+
+gulp.task('minjs', function() {
+  return gulp.src(['bower_components/jquery/dist/jquery.js', 'bower_components/bootstrap/dist/js/bootstrap.js'])
+    .pipe(concat('script.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('assets'));
+});
+
+gulp.task('ship', ['mincss', 'minjs']);
+
+gulp.task('watch', function() {
+    // if a less file changes, run the less task
+    gulp.watch('assets/style.css', ['mincss']);
 });
