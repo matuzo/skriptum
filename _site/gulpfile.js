@@ -1,10 +1,11 @@
 var gulp = require('gulp'),
 	usemin = require('gulp-usemin'),
 	uglify = require('gulp-uglify'),
-	minifyCss = require('gulp-minify-css');
+	minifyCss = require('gulp-minify-css'),
+	rename = require("gulp-rename");
 
 gulp.task('usemin', function() {
-	return gulp.src('dev/index.html')
+	return gulp.src('_site/index.html')
 	.pipe(usemin())
-	.pipe(gulp.dest(''));
+	.pipe(gulp.dest('_site'));
 });
