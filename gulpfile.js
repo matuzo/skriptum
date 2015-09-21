@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify');
 
 gulp.task('mincss', function() {
-  return gulp.src(['assets/style.css', 'bower_components/bootstrap/dist/css/bootstrap.css'])
+  return gulp.src(['assets/style.css', 'bower_components/bootstrap/dist/css/bootstrap.css', 'bower_components/bootstrap/dist/css/bootstrap-theme.css'])
     .pipe(concat('style.min.css'))
     .pipe(minifyCss({'keepSpecialComments': 0}))
     .pipe(gulp.dest('assets'));
