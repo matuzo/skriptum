@@ -3,6 +3,7 @@ layout: skriptum
 title: Box-Modell
 permalink: /htmlcss/boxmodell/
 ---
+
 #Box-Modell
 
 ## Allgemeines
