@@ -1,6 +1,6 @@
 $(function() {
 	if($('.localnav').length) {
-		$('h2').each(function() {
+		$('h3').each(function() {
 			var id = $(this).attr('id'),
 				text = $(this).text();
 			$a = '<a href="#'+id+'">'+text+'</a>';

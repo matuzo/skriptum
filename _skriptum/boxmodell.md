@@ -4,9 +4,9 @@ title: Box-Modell
 permalink: /htmlcss/boxmodell/
 ---
 
-#Box-Modell
+## Box-Modell
 
-## Allgemeines
+### Allgemeines
 
 Das Box-Modell legt fest wie sich Blocklevel-Elemente hinsichtlich ihrer Breite und Höhe verhalten und wie Innen- und Außenabstand und Rahmen interpretiert werden. Das Verständnis des Box-Modells ist essenziell für das grundsätzliche Layouting in CSS.
 
@@ -14,7 +14,7 @@ Die Eigenschaft width eines Elements bezieht sich auf die Breite seines Inhalts.
 
 <img src="{{site.baseurl}}/images/boxmodell.jpg" class="img-responsive" alt="Box-Modell" />
 
-## width (Breite)
+### width (Breite)
 
 Die Breite eines Elements kann mit relativen oder absoluten Zahl- oder Prozentwerten (Prozentwerte beziehen sich auf die Breite des Elternelements) definiert werden. Der Standartwert für die Breite eines Elements ist 'auto'. width kann nur auf Blocklevelelemente angewendet werden.
 
@@ -26,7 +26,7 @@ div {
 {% endhighlight %}
 
 
-## min-width
+### min-width
 
 Gibt die minimale Breite eines Elements an.
 
@@ -37,7 +37,7 @@ div {
 {% endhighlight %}
 
 
-## max-width
+### max-width
 
 Gibt die maximale Breite eines Elements an. (Funktioniert nicht in IE6)
 
@@ -49,11 +49,11 @@ div {
 
 
 
-## margin (Aussenabstand)
+### margin (Aussenabstand)
 
 margin gibt den Aussenabstand eines Elementes an. Der Abstand kann relativ oder absolut angegeben werden und auch mit negativen Werten.
 
-### Jede Seite einzeln definieren
+#### Jede Seite einzeln definieren
 	
 {% highlight css %}	
 p { 
@@ -64,7 +64,7 @@ p {
 }
 {% endhighlight %}
 
-### Jede Seite einzeln definieren 
+#### Jede Seite einzeln definieren 
 Kurzschreibweise in der Reihenfolge: top / right / bottom / left
 
 {% highlight css %}	
@@ -74,7 +74,7 @@ p {
 }
 {% endhighlight %}
 
-### Ein Wert für alle Seiten
+#### Ein Wert für alle Seiten
 
 {% highlight css %}	
 
@@ -83,7 +83,7 @@ p {
 }
 {% endhighlight %}
 
-### Ein Wert für oben und unten und ein Wert für links und rechts 
+#### Ein Wert für oben und unten und ein Wert für links und rechts 
 margin: top und bottom / left und right
 
 {% highlight css %}	
@@ -92,7 +92,7 @@ p {
 }
 {% endhighlight %}
 
-### Ein Wert für oben, einer für links und rechts und einer für unten 
+#### Ein Wert für oben, einer für links und rechts und einer für unten 
 margin: top / left und right / bottom
 
 {% highlight css %}		
@@ -102,11 +102,11 @@ p {
 {% endhighlight %}
 
 
-## padding (Innenabstand)
+### padding (Innenabstand)
 
 padding gibt den Innenabstand eines Elementes an. Der Abstand kann relativ oder absolut angegeben werden und ausschließlich mit positiven Werten.
 
-### Jede Seite einzeln definieren
+#### Jede Seite einzeln definieren
 
 {% highlight css %}			
 p { 
@@ -117,7 +117,7 @@ p {
 }
 {% endhighlight %}
 
-### Jede Seite einzeln definieren
+#### Jede Seite einzeln definieren
 Kurzschreibweise in der Reihenfolge: top / right / bottom / left
 
 {% highlight css %}			
@@ -126,7 +126,7 @@ p {
 }
 {% endhighlight %}
 
-### Ein Wert für alle Seiten
+#### Ein Wert für alle Seiten
 
 	
 {% highlight css %}			
@@ -135,7 +135,7 @@ p {
 }
 {% endhighlight %}
 
-### Ein Wert für oben und unten und ein Wert für links und rechts 
+#### Ein Wert für oben und unten und ein Wert für links und rechts 
 padding: top und bottom / left und right
 
 	
@@ -145,7 +145,7 @@ p {
 }
 {% endhighlight %}
 
-### Ein Wert für oben, einer für links und rechts und einer für unten
+#### Ein Wert für oben, einer für links und rechts und einer für unten
 padding: top / left und right / bottom)
 
 	

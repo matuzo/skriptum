@@ -3,10 +3,10 @@ layout: skriptum
 title: Textformatierung
 permalink: /htmlcss/textformatierung/
 ---
-#Textformatierung
+## Textformatierung
 
 
-## text-transform (Schrifttransformation)
+### text-transform (Schrifttransformation)
 
 Darstellung von Text in Klein- oder Großbuchstaben
 
@@ -24,7 +24,7 @@ p {
 
 **lowercase** - Alle Buchstaben werden klein dargestellt
 
-## color
+### color
 
 Ändert die Textfarbe in Hexadezimal, rgb(), rgba() oder mit Schlüsselwörtern.
 
@@ -34,7 +34,7 @@ h1 {
 }
 {% endhighlight %}
 
-## font-family (Schriftart)
+### font-family (Schriftart)
 
 Mit font-family lässt sich eine Schrift, eine Schriftfamilie oder eine generische Schriftfamilie definieren. Diese Werte werden auch auf Kindelemente vererbt.
 
@@ -46,22 +46,22 @@ body {
 }
 {% endhighlight %}
 
-### Generische Schriftarten
+#### Generische Schriftarten
 
-#### serif
+##### serif
 
 Serifenschriften sind an den "Füßchen" an den Enden der Buchstaben zu erkennen.
 
 Beispielsweise: Times New Roman oder Georgia.
 
-#### sans-serif
+##### sans-serif
 
 Serifenlose Schriften besitzen im Gegensatz zu Serifenschriften diese zusätzlichen Verzierungen nicht.
 
 Beispielsweise: Arial oder Verdana
 
 
-#### monospace
+##### monospace
 
 Bei Monospace-Schriften haben alle Buchstaben die gleiche feste Breite. Diese Schriften eignen sich beispielsweise zur Darstellung von Programmcode.
 
@@ -69,7 +69,7 @@ Beispielsweise: Courier oder Lucida
 
  
 
-#### cursive
+##### cursive
 
 Kursive Schriften
 
@@ -77,7 +77,7 @@ Beispielsweise: Monotype Corsiva
 
  
 
-#### fantasy
+##### fantasy
 
 Fantasy wird verwendet für Schmuckschriften. Generall sehen solche Schriften sehr unterschiedlich aus.
 
@@ -89,7 +89,7 @@ Weiterführende Links zu Schriften und generischen Schriftfamilien:
 
 <http://cssfontstack.com/>
 
-##  font-style (Schriftstil)
+###  font-style (Schriftstil)
 
 Mit font-style definiert man den Schriftstil eines Textes
 
@@ -109,7 +109,7 @@ body {
 
 
 
-## font-weight (Schriftstärke)
+### font-weight (Schriftstärke)
 
 Mit font-weight gibt man an, wie stark Text dargestellt werden soll.
 {% highlight css %}
