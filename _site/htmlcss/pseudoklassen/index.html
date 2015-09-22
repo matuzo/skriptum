@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<title>Skriptum - Pseudoklassen </title>
+
+		<link rel="stylesheet" href="/skriptum/assets/style.min.css">
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<a class="navbar-brand" href="/skriptum/">Skriptum</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CSS <span class="caret"></span></a>
+						
+						<ul class="dropdown-menu">
+							<li><a href="/skriptum/htmlcss/textformatierung/">Textformatierung</a></li>
+							<li><a href="/skriptum/htmlcss/boxmodell/">Box-Modell</a></li>
+						</ul>
+					</li>
+					<li><a href="/skriptum/links">Links</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<div class="container">
+
+	<div class="row">
+		<div class="col-md-6 col-md-offset-1 col-sm-12">
+			<h2 id="pseudoklassen">Pseudoklassen</h2>
+
+<h3 id="allgemeines">Allgemeines</h3>
+
+<p>Pseudoklassen sind den „normalen“ Klassen sehr ähnlich, mit dem Unterschied, dass sie im Markup nicht explizit angegeben werden. Sie tun also so als ob sie Elementen Klassen hinzufügen, um auf gewisse Gegebenheiten reagieren zu können. Beispielsweise unterschiedliche Zustände von Elementen, hervorgerufen durch Userinteraktion.</p>
+
+<p>Man könnte beispielsweise so das erste Element einer Liste anders einfärben</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">li</span><span class="nd">:first-child</span> <span class="p">{</span>
+  <span class="k">color</span><span class="o">:</span><span class="nb">red</span>
+<span class="p">}</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Rot<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Schwarz<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Schwarz<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Schwarz<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+
+<h3 id="css-21-pseudoklassen">CSS 2.1 Pseudoklassen</h3>
+
+<h4 id="fr-verweise-zu-noch-nicht-besuchten-seiten">Für Verweise zu noch nicht besuchten Seiten</h4>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nd">:link</span> <span class="p">{}</span></code></pre></div>
+
+<h4 id="fr-verweise-zu-bereits-besuchten-seiten">Für Verweise zu bereits besuchten Seiten</h4>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nd">:visited</span> <span class="p">{}</span></code></pre></div>
+
+<p><strong>Wichtig:</strong> <a href="http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited">Limitiertes Styling für :visited</a></p>
+
+<h4 id="befindet-man-sich-mit-der-maus-ber-einem-element">Befindet man sich mit der Maus über einem Element</h4>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nd">:hover</span> <span class="p">{}</span></code></pre></div>
+
+<h4 id="fr-aktive-elemente-bspw-ein-link-der-gerade-geklickt-wird">Für aktive Elemente (bspw. ein Link der gerade geklickt wird)</h4>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nd">:active</span> <span class="p">{}</span></code></pre></div>
+
+<h4 id="fr-fokusierte-elemente-bspw-ein-formularfeld">Für fokusierte Elemente (bspw. ein Formularfeld)</h4>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nd">:focus</span> <span class="p">{}</span></code></pre></div>
+
+<p>Das Fokusieren mit der Tab-Taste funktioniert in älteren Webkit Browsern und im aktuellen Safari per default nur bei Formularfeldern. Damit ein Element fokusierbar ist benötigt es die Eigenschaft Tabindex. Diese steuert die Reihenfolge in der Elemente fokusiert werden. </p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">tabindex=</span><span class="s">&quot;1&quot;</span> <span class="na">value=</span><span class="s">&quot;Dann ich&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">tabindex=</span><span class="s">&quot;-1&quot;</span> <span class="na">value=</span><span class="s">&quot;Ich werde nicht fokusiert&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">tabindex=</span><span class="s">&quot;0&quot;</span> <span class="na">value=</span><span class="s">&quot;Zuerst werde ich fokusiert&quot;</span> <span class="nt">/&gt;</span></code></pre></div>
+
+<p>Wenn das Dokument sinnvoll und strukturiert aufgebaut ist, muss dieses Attribut in den meisten Fällen nicht verwendet werden.</p>
+
+<p><a href="http://whatisdamon.com/blog/2012/01/why-your-skip-to-content-link-might-not-work/">Das Problem mit Skiplinks in Webkit</a></p>
+
+<p>Bei Links greift der tabindex in Safari aber trotzdem nicht. Dafür gibt es zwei Lösungen:</p>
+
+<ol>
+  <li>
+    <p>Mit alt+tab durchtaben, dann werden alle Elemente fokusiert</p>
+  </li>
+  <li>
+    <p>Einstellen, dass per default alle Elemente fokusiert werden (Safari/Preferences/Advanced/Press Tab to highlight each item on a webpage)</p>
+  </li>
+</ol>
+
+<h4 id="ein-element-das-das-erste-kindelement-eines-anderen-elements-ist">Ein Element, das das erste Kindelement eines anderen Elements ist</h4>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nd">:first-child</span> <span class="p">{}</span></code></pre></div>
+
+<h4 id="ein-element-basierend-auf-der-sprache-selektieren">Ein Element basierend auf der Sprache selektieren.</h4>
+
+<p>Die Sprache muss nicht explizit für dieses Element mittels lang-Attribut definiert werden. Es kann die Sprachdeklaration von einem Elternelement erben.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nd">:lang</span><span class="o">()</span> <span class="p">{}</span></code></pre></div>
+
+
+		</div>
+
+		<div class="col-md-4 col-md-offset-1 col-sm-12">
+			<!--  -->
+			<ul class="localnav list-group" data-spy="affix" data-offset-top="0"></ul>
+		</div>
+
+	</div>
+
+	</div> <!-- /.container -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+	<script src="/skriptum/assets/script.min.js"></script>
+
+</body>
+</html>
