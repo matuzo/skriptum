@@ -58,6 +58,92 @@
 
 <p><strong>lowercase</strong> - Alle Buchstaben werden klein dargestellt</p>
 
+<h2 id="color">color</h2>
+
+<p>Ändert die Textfarbe in Hexadezimal, rgb(), rgba() oder mit Schlüsselwörtern.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">h1</span> <span class="p">{</span>
+  <span class="k">color</span><span class="o">:</span> <span class="k">rgb</span><span class="p">(</span><span class="m">255</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+<h2 id="font-family-schriftart">font-family (Schriftart)</h2>
+
+<p>Mit font-family lässt sich eine Schrift, eine Schriftfamilie oder eine generische Schriftfamilie definieren. Diese Werte werden auch auf Kindelemente vererbt.</p>
+
+<p>Browser können nur die Schriften anzeigen, die auf dem System des Benutzers vorhanden sind. Deswegen definiert man mehrere Schriften, durch Kommata getrennt, sollte eine nicht vorhanden sein. Bevorzugt wir die zuerst definierte Schrift, sollte diese nicht am Rechner des Benutzers installiert sein, wird die nächste genommen. Ist keine der angegebenen Schriften vorhanden, wird die standardmäßige generische Schrift verwendet. Schriftnamen, die Lehrzeichen enthalten, müssen in Anführungszeichen gesetzt werden.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span> 
+  <span class="k">font-family</span><span class="o">:</span> <span class="n">Times</span><span class="o">,</span> <span class="s2">&quot;Times New Roman&quot;</span><span class="o">,</span> <span class="k">serif</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="generische-schriftarten">Generische Schriftarten</h3>
+
+<h4 id="serif">serif</h4>
+
+<p>Serifenschriften sind an den “Füßchen” an den Enden der Buchstaben zu erkennen.</p>
+
+<p>Beispielsweise: Times New Roman oder Georgia.</p>
+
+<h4 id="sans-serif">sans-serif</h4>
+
+<p>Serifenlose Schriften besitzen im Gegensatz zu Serifenschriften diese zusätzlichen Verzierungen nicht.</p>
+
+<p>Beispielsweise: Arial oder Verdana</p>
+
+<h4 id="monospace">monospace</h4>
+
+<p>Bei Monospace-Schriften haben alle Buchstaben die gleiche feste Breite. Diese Schriften eignen sich beispielsweise zur Darstellung von Programmcode.</p>
+
+<p>Beispielsweise: Courier oder Lucida</p>
+
+<h4 id="cursive">cursive</h4>
+
+<p>Kursive Schriften</p>
+
+<p>Beispielsweise: Monotype Corsiva</p>
+
+<h4 id="fantasy">fantasy</h4>
+
+<p>Fantasy wird verwendet für Schmuckschriften. Generall sehen solche Schriften sehr unterschiedlich aus.</p>
+
+<p>Beispielsweise: Impact oder Matura MT Script Capitals</p>
+
+<p>Weiterführende Links zu Schriften und generischen Schriftfamilien:</p>
+
+<p><a href="http://cssfontstack.com/">http://cssfontstack.com/</a></p>
+
+<h2 id="font-style-schriftstil">font-style (Schriftstil)</h2>
+
+<p>Mit font-style definiert man den Schriftstil eines Textes</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span> 
+  <span class="k">font-style</span><span class="o">:</span> <span class="k">italic</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p><strong>normal</strong> - Der normale Schriftstil.</p>
+
+<p><strong>italic</strong> - Mit italic wird der kursive Schriftstil der Schrift angezeigt. Mann sollte italic standardmäßig verwenden um Schrift kursiv darzustellen. Gibt es keinen kursiven Schriftschnitt einer Schrift nicht, wird er oblique dargestellt.</p>
+
+<p><strong>oblique</strong> - Mit oblique wir ein normale Schriftstil schräg gestellt. Oblique gilt nur als Notlösung, für Schriften die keinen kursiven Schriftschnitt haben.</p>
+
+<h2 id="font-weight-schriftstrke">font-weight (Schriftstärke)</h2>
+
+<p>Mit font-weight gibt man an, wie stark Text dargestellt werden soll.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span>
+    <span class="k">font-weight</span><span class="o">:</span> <span class="k">bold</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p><strong>100 - 900</strong> - Verschiedenste Abstufungen der Schriftstärke. Viele Schriften bieten nicht genug Schnitte an um so feine Unterschiede zu machen. Falls nur zwei Schriftschnitte zur Verfügung stehen, entsprechen die Werte 100-500 normal und 600-900 bold.</p>
+
+<p><strong>normal</strong> - Text wird normal dargestellt (entspricht dem Wert 400)</p>
+
+<p><strong>bold</strong> - Text wird fett dargestellt (entspricht dem Wert 700)</p>
+
+<p><strong>bolder</strong> - Der Text wird in der nächst fetteren Stufe als sein Eltern-Element dargestellt.</p>
+
+<p><strong>lighter</strong> - Text wird entsprechend dünner formatiert</p>
+
 		</div>
 
 		<div class="col-md-4 col-md-offset-1 col-sm-12">
