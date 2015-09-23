@@ -86,6 +86,12 @@ Bei Links greift der tabindex in Safari aber trotzdem nicht. Dafür gibt es zwei
 :first-child {}
 {% endhighlight %}
 
+#### Ein Element, das das letzte Kindelement eines anderen Elements ist
+
+{% highlight css %}	
+:last-child {}
+{% endhighlight %}
+
 #### Ein Element basierend auf der Sprache selektieren.
 
 Die Sprache muss nicht explizit für dieses Element mittels lang-Attribut definiert werden. Es kann die Sprachdeklaration von einem Elternelement erben.
