@@ -28,6 +28,7 @@
 						<ul class="dropdown-menu">
 							<li><a href="/skriptum/htmlcss/pseudoklassen/">Pseudoklassen</a></li>
 							<li><a href="/skriptum/htmlcss/hintergrund/">Hintergrund</a></li>
+							<li><a href="/skriptum/htmlcss/border/">Rahmen</a></li>
 							<li><a href="/skriptum/htmlcss/boxmodell/">Box-Modell</a></li>
 							<li><a href="/skriptum/htmlcss/textformatierung/">Textformatierung</a></li>
 						</ul>
@@ -51,6 +52,24 @@
 <p>Die Eigenschaft width eines Elements bezieht sich auf die Breite seines Inhalts. Zu dieser Breite werden noch Innenabstand und Rahmen addiert. Somit ergeben Breite, Innenabstand und Rahmen die Gesamtbreite des Elements.</p>
 
 <p><img src="/skriptum//images/boxmodell.jpg" class="img-responsive" alt="Box-Modell" /></p>
+
+<h3 id="box-sizing">box-sizing</h3>
+
+<p>Legt fest, wie sich das Box-Modell bei dem selektierten Element verhält.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span>
+  <span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">*,</span> <span class="o">*</span><span class="nd">:before</span><span class="o">,</span> <span class="o">*</span><span class="nd">:after</span> <span class="p">{</span>
+  <span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p><strong>content-box:</strong> Standardwert. Die tatsächliche Breite setzt sich zusammen aus: width, height, padding und border.</p>
+
+<p><strong>padding-box:</strong> Die tatsächliche Breite setzt sich zusammen aus: width, height und border. padding wird automatisch in die Höhe und Breite eingerechnet.</p>
+
+<p><strong>border-box:</strong> Die tatsächliche Breite setzt sich zusammen aus: width, height. padding und border werden automatisch in die Höhe und Breite eingerechnet.</p>
 
 <h3 id="width-breite">width (Breite)</h3>
 
@@ -155,6 +174,7 @@
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span> 
   <span class="k">padding</span><span class="o">:</span><span class="m">10px</span> <span class="m">30px</span> <span class="m">20px</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
+
 
 		</div>
 

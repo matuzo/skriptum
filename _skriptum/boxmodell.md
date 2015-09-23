@@ -14,6 +14,28 @@ Die Eigenschaft width eines Elements bezieht sich auf die Breite seines Inhalts.
 
 <img src="{{site.baseurl}}/images/boxmodell.jpg" class="img-responsive" alt="Box-Modell" />
 
+
+### box-sizing
+
+Legt fest, wie sich das Box-Modell bei dem selektierten Element verhält.
+
+{% highlight css %}     
+p {
+  box-sizing: content-box;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+{% endhighlight %}
+
+**content-box:** Standardwert. Die tatsächliche Breite setzt sich zusammen aus: width, height, padding und border.
+
+**padding-box:** Die tatsächliche Breite setzt sich zusammen aus: width, height und border. padding wird automatisch in die Höhe und Breite eingerechnet.
+
+**border-box:** Die tatsächliche Breite setzt sich zusammen aus: width, height. padding und border werden automatisch in die Höhe und Breite eingerechnet.
+
+
 ### width (Breite)
 
 Die Breite eines Elements kann mit relativen oder absoluten Zahl- oder Prozentwerten (Prozentwerte beziehen sich auf die Breite des Elternelements) definiert werden. Der Standartwert für die Breite eines Elements ist 'auto'. width kann nur auf Blocklevelelemente angewendet werden.
