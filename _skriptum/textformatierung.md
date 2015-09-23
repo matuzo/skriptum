@@ -65,25 +65,7 @@ Beispielsweise: Arial oder Verdana
 
 Bei Monospace-Schriften haben alle Buchstaben die gleiche feste Breite. Diese Schriften eignen sich beispielsweise zur Darstellung von Programmcode.
 
-Beispielsweise: Courier oder Lucida
-
- 
-
-##### cursive
-
-Kursive Schriften
-
-Beispielsweise: Monotype Corsiva
-
- 
-
-##### fantasy
-
-Fantasy wird verwendet für Schmuckschriften. Generall sehen solche Schriften sehr unterschiedlich aus.
-
-Beispielsweise: Impact oder Matura MT Script Capitals
-
- 
+Beispielsweise: Courier oder Lucida 
 
 Weiterführende Links zu Schriften und generischen Schriftfamilien:
 
