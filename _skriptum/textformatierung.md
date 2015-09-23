@@ -128,3 +128,18 @@ p {
 **bolder** - Der Text wird in der nächst fetteren Stufe als sein Eltern-Element dargestellt.
 
 **lighter** - Text wird entsprechend dünner formatiert
+
+
+### font-size (Schriftgröße)
+
+Die Schriftgröße wird üblicherweise in px, em oder Prozent angegeben.
+
+{% highlight css %}
+p {
+    font-size: 14px;
+}
+{% endhighlight %}
+
+**Numerische Angaben** - in cm, mm, in, pt, pc, em, ex, px
+
+**Prozentuale Angaben** - Bezogen auf die Schriftgröße des Elternelements
