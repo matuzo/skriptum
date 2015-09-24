@@ -29,6 +29,10 @@ li:first-child {
 
 ### CSS 2.1 Pseudoklassen
 
+Liste der CSS 2.1 Pseudoklassen: <http://www.w3.org/TR/CSS21/selector.html#pattern-matching>
+
+Liste der CSS 3 Pseudoklassen: <http://www.w3.org/TR/css3-selectors/#selectors>
+
 #### Für Verweise zu noch nicht besuchten Seiten
 
 {% highlight css %}
