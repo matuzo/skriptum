@@ -5,6 +5,3 @@ collections:
     output: true
 
 baseurl: /skriptum/
-
-defaults:
-	order: ['z','ll']
