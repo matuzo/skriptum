@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 	<meta charset="UTF-8">
-	<title>Skriptum - Hintergrund </title>
+	<title>Skriptum - Schatten </title>
 
 		<link rel="stylesheet" href="/skriptum/assets/style.min.css">
 </head>
@@ -74,16 +74,23 @@
 
 	<div class="row">
 		<div class="col-md-6 col-md-offset-1 col-sm-12">
-			<h2 id="hintergrund">Hintergrund</h2>
+			<h2 id="box-shadow">box-shadow</h2>
 
-<h3 id="background-color-hintergrundfarbe">background-color (Hintergrundfarbe)</h3>
-
-<p>Die Hintergrundfarbe eines Elements definieren. Der Standardwert ist transparent (Durchsichtig). Farbwerte könnnen hexadezimal, mit Schlüsselwörtern, in rgb() oder rgba()-Werten angegeben werden.</p>
+<p>Schatten in oder um ein Element</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
-  <span class="k">background-color</span><span class="o">:</span> <span class="m">#ff0</span><span class="p">;</span>
+  <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="m">10px</span> <span class="m">10px</span> <span class="m">10px</span> <span class="m">5px</span> <span class="m">#f00</span> <span class="k">inset</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
+<p>box-shadow: [horizontaler Versatz] [vertikaler Versatz] [Kantenhärte (optional)] [Ausbreitung (optional)] [Farbe (optional)];</p>
+
+<p>Zusätzlich kann auch noch der Wert <code>inset</code> vergeben werden, wenn es ein innerer Schatten werden soll.</p>
+
+<p>Es können einem Element auch mehrere Schatten zugewiesen werden.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
+  <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="m">-10px</span> <span class="m">-10px</span> <span class="m">#f00</span><span class="o">,</span> <span class="m">10px</span> <span class="m">10px</span> <span class="m">#00f</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
 
 		</div>
 

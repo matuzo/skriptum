@@ -11,6 +11,18 @@ overview: true
 		
 		<div class="list-group">
 
+
+			{% assign items = site.skriptum  %}
+			{% for item in items %}
+				<a href="{{site.baseurl}}{{ item.url }}" class="list-group-item">
+					{{ item.title }}
+				</a>
+			{% endfor %}
+		
+
+			<!-- <a href="{{site.baseurl}}htmlcss/darstellung/" class="list-group-item">
+				Darstellung/Sichtbarkeit
+			</a>
 			<a href="{{site.baseurl}}htmlcss/pseudoklassen/" class="list-group-item">
 				Pseudoklassen
 			</a>
@@ -27,7 +39,7 @@ overview: true
 			</a>
 			<a href="{{site.baseurl}}htmlcss/textformatierung/" class="list-group-item">
 				Textformatierung
-			</a>
+			</a> -->
 		</div>
 	</div>
 </div>

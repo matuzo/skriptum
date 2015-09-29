@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 	<meta charset="UTF-8">
-	<title>Skriptum - Hintergrund </title>
+	<title>Skriptum - Darstellung/Sichtbarkeit </title>
 
 		<link rel="stylesheet" href="/skriptum/assets/style.min.css">
 </head>
@@ -74,15 +74,25 @@
 
 	<div class="row">
 		<div class="col-md-6 col-md-offset-1 col-sm-12">
-			<h2 id="hintergrund">Hintergrund</h2>
+			<h2 id="darstellungsichtbarkeit">Darstellung/Sichtbarkeit</h2>
 
-<h3 id="background-color-hintergrundfarbe">background-color (Hintergrundfarbe)</h3>
+<h3 id="display-anzeigemodus">display (Anzeigemodus)</h3>
 
-<p>Die Hintergrundfarbe eines Elements definieren. Der Standardwert ist transparent (Durchsichtig). Farbwerte könnnen hexadezimal, mit Schlüsselwörtern, in rgb() oder rgba()-Werten angegeben werden.</p>
+<p>display steuert wie ein Element dargestellt wird.</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
-  <span class="k">background-color</span><span class="o">:</span> <span class="m">#ff0</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">span</span> <span class="p">{</span>
+    <span class="k">display</span><span class="o">:</span><span class="k">inline</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
+
+<p><strong>none</strong> - Das Element wird nicht dargestellt und es wird auch kein Platz auf der Seite freigehalten. Es verhält sich als ob es nicht existiert.</p>
+
+<p><strong>block</strong> - Das Element verhält sich wie ein Blocklevelelement</p>
+
+<p><strong>inline</strong> - Das Element verhält sich wie ein Inlineelement</p>
+
+<p><strong>inline-block</strong> - Mischung aus inline und block. Man kann uneingeschränkt width, height, padding und margin vergeben. Element erzeugt aber keinen Zeilenumbruch.</p>
+
+<p>Weitere: <a href="http://www.css4you.de/display.html">http://www.css4you.de/display.html</a></p>
 
 
 		</div>
