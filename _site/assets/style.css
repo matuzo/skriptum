@@ -30,3 +30,11 @@ h5 {
 	margin-top: 20px;
 	margin-bottom: 5px;
 }
+
+.panel-body h4 {
+	margin-top: 0;
+}
+
+.panel-body .list-group:last-child {
+	margin-bottom: 4px;
+}
