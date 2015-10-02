@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<title>Skriptum - Layout </title>
+
+		<link rel="stylesheet" href="/skriptum/assets/style.min.css">
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<a class="navbar-brand" href="/skriptum/">Skriptum</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CSS <span class="caret"></span></a>
+						
+						<ul class="dropdown-menu">
+							<!-- <li><a href="/skriptum/htmlcss/pseudoklassen/">Pseudoklassen</a></li>
+							<li><a href="/skriptum/htmlcss/hintergrund/">Hintergrund</a></li>
+							<li><a href="/skriptum/htmlcss/border/">Rahmen</a></li>
+							<li><a href="/skriptum/htmlcss/boxmodell/">Box-Modell</a></li>
+							<li><a href="/skriptum/htmlcss/textformatierung/">Textformatierung</a></li> -->
+
+							
+							
+								<li><a href="/skriptum//htmlcss/border/">
+									Rahmen
+								</a></li>
+							
+								<li><a href="/skriptum//htmlcss/boxmodell/">
+									Box-Modell
+								</a></li>
+							
+								<li><a href="/skriptum//htmlcss/darstellung/">
+									Darstellung/Sichtbarkeit
+								</a></li>
+							
+								<li><a href="/skriptum//htmlcss/hintergrund/">
+									Hintergrund
+								</a></li>
+							
+								<li><a href="/skriptum//htmlcss/layout/">
+									Layout
+								</a></li>
+							
+								<li><a href="/skriptum//htmlcss/pseudoklassen/">
+									Pseudoklassen
+								</a></li>
+							
+								<li><a href="/skriptum//htmlcss/schatten/">
+									Schatten
+								</a></li>
+							
+								<li><a href="/skriptum//htmlcss/textformatierung/">
+									Textformatierung
+								</a></li>
+							
+						</ul>
+					</li>
+					<li><a href="/skriptum/links">Links</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<div class="container">
+
+	<div class="row">
+		<div class="col-md-6 col-md-offset-1 col-sm-12">
+			<h2 id="layout">Layout</h2>
+
+<h3 id="flexbox">Flexbox</h3>
+
+<p>Layouting mit CSS. Mit Flexbox kann man Layoutelemente definieren und festlegen wie sich die Kindelemente dieser verhalten sollen.</p>
+
+<p><strong>Browsersupport:</strong> <a href="http://caniuse.com/#search=flexbox">http://caniuse.com/#search=flexbox</a>  </p>
+
+<p><strong>Umfangreicher Artikel mit Grafiken:</strong> <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></p>
+
+<p data-height="268" data-theme-id="6054" data-slug-hash="dYvpyN" data-default-tab="result" data-user="matuzo" class="codepen">See the Pen <a href="http://codepen.io/matuzo/pen/dYvpyN/">dYvpyN</a> by Manuel Matuzovic (<a href="http://codepen.io/matuzo">@matuzo</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h4 id="eigenschaften-fr-das-elternelement">Eigenschaften für das Elternelement</h4>
+
+<h4 id="display">display</h4>
+<p>Flex Container definieren.  </p>
+
+<p><code>display: flex;</code><br />
+<strong>flex:</strong> Volle Breite und Zeilenumbruch<br />
+<strong>inline-flex</strong> So breit wie sein Inhalt und kein Zeilenumbruch</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">ul</span> <span class="p">{</span> 
+  <span class="k">display</span><span class="o">:</span><span class="n">flex</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h4 id="flex-direction">flex-direction</h4>
+<p>Achse und Richtung der Ausrichtung</p>
+
+<p><code>flex-direction: row-reverse;</code><br />
+<strong>row:</strong> links nach rechts<br />
+<strong>row-reverse:</strong> rechts nach links<br />
+<strong>column:</strong> von oben nach unten<br />
+<strong>column-reverse:</strong> von unten nach oben</p>
+
+<h4 id="flex-wrap">flex-wrap</h4>
+<p>Verhalten ob Kindelemente in einer oder mehreren Zeilen dargestellt werden sollen</p>
+
+<p><code>flex-wrap: wrap-reverse</code><br />
+<strong>nowrap:</strong> alles in einer Zeile (default)  <br />
+<strong>wrap:</strong> mehrere Zeilen<br />
+<strong>wrap-reverse:</strong> mehrere Zeilen rechts nach links</p>
+
+<h4 id="justify-content">justify-content</h4>
+<p>Ausrichtung der Inhalte  </p>
+
+<p><code>justify-content: center</code></p>
+
+<p><strong>flex-start:</strong> default<br />
+<strong>flex-end:</strong> Am Ende positioniert<br />
+<strong>center:</strong> Inhalte zentrieren<br />
+<strong>space-between:</strong> Gleichmäßig verteilt. Erstes am Anfang, Letztes am Ende<br />
+<strong>space-around:</strong> Gleichmäßig verteilt mit gleich viel Abstand links und rechts.  </p>
+
+<h4 id="align-items">align-items</h4>
+<p>Ausrichtung der Elemente auf entgegengesetzter Achse.</p>
+
+<p><strong>flex-start:</strong> Am Anfang<br />
+<strong>flex-end:</strong> Am Ende positioniert<br />
+<strong>center:</strong> Inhalte zentrieren<br />
+<strong>strech:</strong> Höhe des Elternelements (default)</p>
+
+<h4 id="align-content">align-content</h4>
+<p>Ausrichtung der Linien auf der entgegengesetzten Achse. Funktioniert nur bei mehreren Zeilen.</p>
+
+<p><strong>flex-start:</strong> default<br />
+<strong>flex-end:</strong> Am Ende positioniert<br />
+<strong>center:</strong> Inhalte zentrieren<br />
+<strong>space-between:</strong> Gleichmäßig verteilt. Erstes am Anfang, Letztes am Ende<br />
+<strong>space-around:</strong> Gleichmäßig verteilt mit gleich viel Abstand oben und unten.  </p>
+
+<h4 id="eigenschaften-fr-das-kindelement">Eigenschaften für das Kindelement</h4>
+
+<h4 id="order">order</h4>
+
+<p>Reihenfolge der Darstellung unabhängig von der Reihenfolge im DOM</p>
+
+<p><code>order: 2</code></p>
+
+<h4 id="flex-grow">flex-grow</h4>
+
+<p>Platz der eingenommen werden soll bzw. Verteilung der Größe, wenn die Elemente wachsen</p>
+
+<p><code>flex-grow: 1</code>  </p>
+
+<p>Wenn alle Elemente den Wert <code>1</code> besitzen, sind sie gleich breit. Wenn eines davon beispielsweise den Wert <code>2</code>  hat, ist es doppelt so breit wie alle anderen.</p>
+
+<h4 id="flex-basis">flex-basis</h4>
+
+<p>Defaultgröße eines Elements</p>
+
+<p><code>flex-basis: 500px;</code></p>
+
+<h4 id="flex-shrink">flex-shrink</h4>
+
+<p>Platz der eingenommen werden soll, wenn die Breite des Elements unter der Defaultgröße liegt.</p>
+
+<p><code>flex-shrink: 2;</code></p>
+
+<p>Element strumpft auf die Hälfte.</p>
+
+<h4 id="flex">flex</h4>
+
+<p>Kurzschreibweise für <code>flex-grow</code>, <code>flex-shrink</code> and <code>flex-basis</code>.</p>
+
+<p><code>flex: 1 2 500px;</code></p>
+
+		</div>
+
+		<div class="col-md-4 col-md-offset-1 col-sm-12">
+			<!--  -->
+			<ul class="localnav list-group" data-spy="affix" data-offset-top="0"></ul>
+		</div>
+
+	</div>
+
+	</div> <!-- /.container -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+	<script src="/skriptum/assets/script.min.js"></script>
+
+</body>
+</html>
