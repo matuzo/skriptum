@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<title>Skriptum - Listen </title>
+
+		<link rel="stylesheet" href="/skriptum/assets/style.min.css">
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<a class="navbar-brand" href="/skriptum/">Skriptum</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CSS <span class="caret"></span></a>
+						
+						<ul class="dropdown-menu">
+							<!-- <li><a href="/skriptum/htmlcss/pseudoklassen/">Pseudoklassen</a></li>
+							<li><a href="/skriptum/htmlcss/hintergrund/">Hintergrund</a></li>
+							<li><a href="/skriptum/htmlcss/border/">Rahmen</a></li>
+							<li><a href="/skriptum/htmlcss/boxmodell/">Box-Modell</a></li>
+							<li><a href="/skriptum/htmlcss/textformatierung/">Textformatierung</a></li> -->
+
+							
+							
+								<li><a href="/skriptum//htmlcss/border/">
+									Rahmen
+								</a></li>
+							
+								<li><a href="/skriptum//htmlcss/boxmodell/">
+									Box-Modell
+								</a></li>
+							
+								<li><a href="/skriptum//htmlcss/darstellung/">
+									Darstellung/Sichtbarkeit
+								</a></li>
+							
+								<li><a href="/skriptum//htmlcss/hintergrund/">
+									Hintergrund
+								</a></li>
+							
+								<li><a href="/skriptum//htmlcss/layout/">
+									Layout
+								</a></li>
+							
+								<li><a href="/skriptum//htmlcss/listen/">
+									Listen
+								</a></li>
+							
+								<li><a href="/skriptum//htmlcss/pseudoklassen/">
+									Pseudoklassen
+								</a></li>
+							
+								<li><a href="/skriptum//htmlcss/schatten/">
+									Schatten
+								</a></li>
+							
+								<li><a href="/skriptum//htmlcss/textformatierung/">
+									Textformatierung
+								</a></li>
+							
+						</ul>
+					</li>
+					<li><a href="/skriptum/links">Links</a></li>
+					<li><a href="/skriptum/changelog">Changelog</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<div class="container">
+
+	<div class="row">
+		<div class="col-md-6 col-md-offset-1 col-sm-12">
+			<h2 id="listen">Listen</h2>
+
+<h3 id="list-style-type-art-des-aufzhlungszeichens">list-style-type (Art des Aufzählungszeichens)</h3>
+
+<p>Mit list-style-type wird die Art des Aufzählungszeichens bzw. der Nummerierung festgelegt.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">ul</span> <span class="p">{</span>
+  <span class="k">list-style-type</span><span class="o">:</span> <span class="k">decimal-leading-zero</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p><strong>none:</strong> Kein Aufzählungszeichen</p>
+
+<p><strong>circle:</strong> Kreise</p>
+
+<p><strong>disc:</strong> Gefüllte Kreise (Standardwert)</p>
+
+<p><strong>square:</strong> Quadrate</p>
+
+<p><strong>decimal:</strong> Dezimal</p>
+
+<p><strong>decimal-leading-zero:</strong> Dezimal mit 0 davor</p>
+
+<p><strong>lower-alpha:</strong> Kleine Buchstaben</p>
+
+<p><strong>upper-alpha:</strong> Große Buchstaben</p>
+
+<p><strong>lower-roman:</strong> Kleine römische Ziffern</p>
+
+<p><strong>upper-roman:</strong> Große römische Ziffern</p>
+
+<h3 id="list-style-image-eigenes-aufzhlungszeichen">list-style-image (Eigenes Aufzählungszeichen)</h3>
+
+<p>Mit list-style-image kann man eigene Aufzählungszeichen definieren</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">ul</span> <span class="p">{</span> 
+    <span class="k">list-style-image</span><span class="o">:</span> <span class="sx">url(&#39;zeichen.jpg&#39;)</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="list-style-position-positionierung-des-aufzhlungszeichens">list-style-position (Positionierung des Aufzählungszeichens)</h3>
+
+<p>list-style-position gibt ab ob die Aufzählungszeichen innerhalb oder außerhalb des Textblocks positioniert sind.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">ul</span> <span class="p">{</span> 
+  <span class="k">list-style-position</span><span class="o">:</span> <span class="k">outside</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p><strong>outside (Standardwert):</strong> Aufzählungszeichen außerhalb des Textblockes</p>
+
+<p><strong>inside:</strong> Aufzählungszeichen innerhalb des Textblockes</p>
+
+<h3 id="list-style-kurzschreibweise">list-style (Kurzschreibweise)</h3>
+
+<p>Kurzschreibweise für die Formatierung von Listen. Wird kein Wert angegeben, wird der jeweilige Standardwert genommen.</p>
+
+<p>list-style-type / list-style-position / url (‘’)</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">ul</span> <span class="p">{</span> 
+    <span class="k">list-style</span><span class="o">:</span> <span class="k">outside</span> <span class="sx">url(&#39;zeichen.gif&#39;)</span><span class="p">;</span>
+<span class="p">}</span>
+ 
+<span class="nt">ol</span> <span class="p">{</span> 
+    <span class="k">list-style</span><span class="o">:</span> <span class="k">lower-greek</span> <span class="k">inside</span><span class="p">;</span> 
+<span class="p">}</span></code></pre></div>
+
+		</div>
+
+		<div class="col-md-4 col-md-offset-1 col-sm-12">
+			<!--  -->
+			<ul class="localnav list-group" data-spy="affix" data-offset-top="0"></ul>
+		</div>
+
+	</div>
+
+	</div> <!-- /.container -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+	<script src="/skriptum/assets/script.min.js"></script>
+
+</body>
+</html>
