@@ -54,6 +54,10 @@
 									Layout
 								</a></li>
 							
+								<li><a href="/skriptum//htmlcss/listen/">
+									Listen
+								</a></li>
+							
 								<li><a href="/skriptum//htmlcss/pseudoklassen/">
 									Pseudoklassen
 								</a></li>
@@ -69,6 +73,7 @@
 						</ul>
 					</li>
 					<li><a href="/skriptum/links">Links</a></li>
+					<li><a href="/skriptum/changelog">Changelog</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -159,6 +164,47 @@
 <p>Die Sprache muss nicht explizit für dieses Element mittels lang-Attribut definiert werden. Es kann die Sprachdeklaration von einem Elternelement erben.</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nd">:lang</span><span class="o">()</span> <span class="p">{}</span></code></pre></div>
+
+<h3 id="css-3-pseudoklassen">CSS 3 Pseudoklassen</h3>
+
+<h4 id="das-n-te-kindelement">Das n-te Kindelement</h4>
+
+<p>Wenn man nicht nur das erste oder letzte Element, sondern das n-te Element selektieren möchte oder jedes n-te.</p>
+
+<h4 id="nth-child">nth-child</h4>
+
+<p>Ausgehend vom ersten Element wird das n-te Element selektiert.</p>
+
+<h5 id="das-zweite-kindelement-selektieren">Das zweite Kindelement selektieren</h5>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">li</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span>
+    <span class="k">color</span><span class="o">:</span> <span class="nb">red</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h5 id="jedes-dritte-kindelement-selektieren">Jedes dritte Kindelement selektieren</h5>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">li</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">3n</span><span class="o">)</span> <span class="p">{</span>
+    <span class="k">color</span><span class="o">:</span> <span class="nb">blue</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h5 id="jedes-zweite-kindelement-beginnend-beim-dritten-selektieren">Jedes zweite Kindelement beginnend beim dritten selektieren</h5>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">li</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">2n</span><span class="o">+</span><span class="nt">3</span><span class="o">)</span> <span class="p">{</span>
+    <span class="k">background</span><span class="o">:</span> <span class="m">#000</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h4 id="nth-last-child">nth-last-child</h4>
+
+<p>Ausgehend vom letzten Element wird das n-te Element selektiert.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">li</span><span class="nd">:nth-last-child</span><span class="o">(</span><span class="nt">4</span><span class="o">)</span> <span class="p">{</span>
+    <span class="k">border</span><span class="o">:</span> <span class="m">10px</span> <span class="k">solid</span> <span class="nb">red</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p><code>nth-last-child</code> kann genauso angewendet werden wie <code>nth-child</code></p>
+
+<p data-height="268" data-theme-id="6054" data-slug-hash="qOmXYq" data-default-tab="result" data-user="matuzo" class="codepen">See the Pen <a href="http://codepen.io/matuzo/pen/qOmXYq/">nth-child and nth-last-child</a> by Manuel Matuzovic (<a href="http://codepen.io/matuzo">@matuzo</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 
 		</div>

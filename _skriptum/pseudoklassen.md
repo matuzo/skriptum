@@ -103,3 +103,49 @@ Die Sprache muss nicht explizit für dieses Element mittels lang-Attribut defini
 {% highlight css %}	
 :lang() {}
 {% endhighlight %}
+
+### CSS 3 Pseudoklassen
+
+#### Das n-te Kindelement
+
+Wenn man nicht nur das erste oder letzte Element, sondern das n-te Element selektieren möchte oder jedes n-te.
+
+#### nth-child
+
+Ausgehend vom ersten Element wird das n-te Element selektiert.
+
+##### Das zweite Kindelement selektieren
+{% highlight css %} 
+li:nth-child(2) {
+    color: red;
+}
+{% endhighlight %}
+
+##### Jedes dritte Kindelement selektieren
+{% highlight css %} 
+li:nth-child(3n) {
+    color: blue;
+}
+{% endhighlight %}
+
+##### Jedes zweite Kindelement beginnend beim dritten selektieren
+{% highlight css %} 
+li:nth-child(2n+3) {
+    background: #000;
+}
+{% endhighlight %}
+
+#### nth-last-child
+
+Ausgehend vom letzten Element wird das n-te Element selektiert.
+
+{% highlight css %} 
+li:nth-last-child(4) {
+    border: 10px solid red;
+}
+{% endhighlight %}
+
+`nth-last-child` kann genauso angewendet werden wie `nth-child`
+
+<p data-height="268" data-theme-id="6054" data-slug-hash="qOmXYq" data-default-tab="result" data-user="matuzo" class='codepen'>See the Pen <a href='http://codepen.io/matuzo/pen/qOmXYq/'>nth-child and nth-last-child</a> by Manuel Matuzovic (<a href='http://codepen.io/matuzo'>@matuzo</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>

@@ -54,6 +54,10 @@
 									Layout
 								</a></li>
 							
+								<li><a href="/skriptum//htmlcss/listen/">
+									Listen
+								</a></li>
+							
 								<li><a href="/skriptum//htmlcss/pseudoklassen/">
 									Pseudoklassen
 								</a></li>
@@ -69,6 +73,7 @@
 						</ul>
 					</li>
 					<li><a href="/skriptum/links">Links</a></li>
+					<li><a href="/skriptum/changelog">Changelog</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -88,6 +93,105 @@
   <span class="k">background-color</span><span class="o">:</span> <span class="m">#ff0</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
+<h3 id="background-image-hintergrundbild">background-image (Hintergrundbild)</h3>
+
+<p>Das Hintergrundbild eines Element festlegen. Dieses wird standardmäßig links oben eingebunden und in x- und y-Richtung wiederholt.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
+  <span class="k">background-image</span><span class="o">:</span><span class="sx">url(&#39;pfad/zur/hintergrundgrafik.jpg)</span><span class="p">;</span> 
+<span class="p">}</span></code></pre></div>
+
+<h3 id="background-repeat-wiederholung">background-repeat (Wiederholung)</h3>
+
+<p>Festlegen ob und wie sich ein Hintergrundbild wiederholt.</p>
+
+<p><strong>repeat (Standartwert):</strong> Das Hintergrundbild wird vertikal und horizontal wiederholt</p>
+
+<p><strong>no-repeat:</strong> Das Hintergrundbild wird nicht wiederholt</p>
+
+<p><strong>repeat-x:</strong> Das Hintergrundbild wird nur horizontal wiederholt</p>
+
+<p><strong>repeat-y:</strong> Das Hintergrundbild wird nur vertikal wiederholt</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span> 
+    <span class="k">background-image</span><span class="o">:</span><span class="sx">url(&#39;pfad/zur/hintergrundgrafik.jpg)</span><span class="p">;</span>
+    <span class="k">background-repeat</span><span class="o">:</span><span class="k">repeat-x</span><span class="p">;</span> 
+<span class="p">}</span></code></pre></div>
+
+<h3 id="background-position-positionierung">background-position (Positionierung)</h3>
+
+<p>Festlegen an welcher Stelle das Hintergrundbild beginnt. Dabei kann die horizontale und vertikale Position definiert werden. Standardmäßig ist das Bild in der oberen linken Ecke des Elements positioniert.</p>
+
+<h4 id="zahl--und-prozentwerte">Zahl- und Prozentwerte</h4>
+
+<p>Mit Zahl- oder Prozentwerten kann der Abstand der Position zum linken oberen Eck angegeben werden. Zahl- und Prozentwerte können gemischt werden und dürfen auch negativ sein. Der erste Werte entspricht der horizontale Verrückung und der zweite Wert der vertikalen. Wird nur ein Wert angegeben, wird dieser als horizontaler Wert interpretiert und der vertikale Wert ist automatisch 50%.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span> 
+    <span class="k">background-image</span><span class="o">:</span><span class="sx">url(&#39;pfad/zur/hintergrundgrafik.jpg)</span><span class="p">;</span>
+    <span class="k">background-position</span><span class="o">:</span> <span class="m">100px</span> <span class="m">40%</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h4 id="schlsselwrter">Schlüsselwörter</h4>
+
+<p>Die Position des Hintergrundbildes kann auch mit Schlüsselwörtern angegeben werden. Dabei muss für beide Richtungen jeweils ein Schlüsselwort angegeben werden (left - center - right und top - center - bottom).</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span> 
+    <span class="k">background-image</span><span class="o">:</span><span class="sx">url(&#39;pfad/zur/hintergrundgrafik.jpg)</span><span class="p">;</span>
+    <span class="k">background-position</span><span class="o">:</span> <span class="k">right</span> <span class="k">bottom</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="background-kurzschreibweise">background (Kurzschreibweise)</h3>
+
+<p>Alle Hintergrundeigenschaften lassen sich in einer Zeile zusammenfassen. Wird eine Eigenschaft nicht angegeben, wird ihr Standardwert genommen.</p>
+
+<p>background-color / background-image / background-repeat / background-attachment / background-position</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span> 
+    <span class="k">background</span><span class="o">:</span> <span class="m">#FF0000</span> <span class="sx">url(&#39;hintergrundgrafik.jpg&#39;)</span> <span class="k">repeat-x</span> <span class="k">fixed</span> <span class="k">left</span> <span class="k">center</span><span class="p">;</span> 
+<span class="p">}</span></code></pre></div>
+
+<hr />
+
+<p><strong>Neu mit CSS3:</strong></p>
+<hr />
+
+<h3 id="background-size">background-size</h3>
+
+<p>Größe des Hintergrundbilds.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">400px</span> <span class="m">250px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p><strong>Numerische Werte (px, em, %, etc..):</strong> 1-2 Parameter. Erster Wert Breite, zweiter Wert Höhe (optional)</p>
+
+<p><strong>cover:</strong> Proportionen bleiben erhalten, Bild füllt Element aus und wird wenn nötig abgeschnitten</p>
+
+<p><strong>contain:</strong> Proportionen bleiben erhalten, Bild füllt Element aus, wenn möglich. Wenn nicht, wird auch nicht abgeschnitten</p>
+
+<h3 id="background-origin">background-origin</h3>
+
+<p>Gibt an woran sich das Hintergrundbild bei der Positionierung orientieren soll.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">-</span><span class="n">origin</span><span class="o">:</span> <span class="k">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p><strong>content-box:</strong> Relativ zu Inhalt<br />
+<strong>padding-box:</strong> Relativ zum padding (Default)<br />
+<strong>border-box:</strong> Relativ zum border</p>
+
+<h3 id="background-clip">background-clip</h3>
+
+<p>Gibt an bis wohin die Hintergrundfarbe reicht.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">section</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">-</span><span class="k">clip</span><span class="o">:</span> <span class="k">padding</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p><strong>border-box:</strong> Bis zum äußeren Rand (default)<br />
+<strong>padding-box:</strong> Bis zum border<br />
+<strong>content-box:</strong> Bis zum padding</p>
 
 		</div>
 
