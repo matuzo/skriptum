@@ -126,3 +126,30 @@ p {
 **Numerische Angaben** - in cm, mm, in, pt, pc, em, ex, px
 
 **Prozentuale Angaben** - Bezogen auf die Schriftgröße des Elternelements
+
+### text-indent (Texteinrückung)
+
+Mit text-indent wird die erste Zeile eines Textes ein- oder ausgerückt, je nachdem ob ein positiver oder negative Wert angegeben wird.
+
+{% highlight css %}
+p {
+    text-indent: -40px;
+}
+{% endhighlight %}
+
+line-height (Zeilenhöhe)
+
+### line-height 
+Gibt die Zeilenhöhe an.
+
+{% highlight css %}
+p {
+    line-height: 16px;
+}
+{% endhighlight %}
+
+**normal** - Standardzeilenhöhe 
+
+**Multiplikator** - Die Zeilenhöhe ergibt sich auch Schriftgröße mal Multiplikator
+
+**Numerische/Prozentuale Angabe** - Entweder in px/em oder Prozent 
