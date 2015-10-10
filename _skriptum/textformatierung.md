@@ -153,3 +153,93 @@ p {
 **Multiplikator** - Die Zeilenhöhe ergibt sich auch Schriftgröße mal Multiplikator
 
 **Numerische/Prozentuale Angabe** - Entweder in px/em oder Prozent 
+
+### text-align (Textausrichtung)
+
+text-align gibt die Ausrichtung des Inhalts eines Elements an.
+
+{% highlight css %}
+p {
+    text-align: right;
+}
+{% endhighlight %}
+
+**left** - Linkbündiger Text
+
+**right** - Rechtsbündiger Text
+
+**center** - Zentrierter Text
+
+**justify** - Blocksatz
+
+### font-variant (Schriftvariante)
+
+Mit font-variant stellt man eine Schrift normal (normal) oder in Kapitälchen (small-caps) dar.
+
+{% highlight css %}
+h1 {
+  font-variant: small-caps;
+}
+{% endhighlight %}
+
+
+### letter-spacing (Buchstabenabstand)
+
+Abstände zwischen Zeichen. Diese Eigenschaft kann in absoluten oder relativen Werten angegeben werden.
+
+{% highlight css %}
+p {
+  letter-spacing: 1.5em;
+}
+{% endhighlight %}
+
+### word-spacing (Wortabstand)
+
+Abstände zwischen Wörtern. Diese Eigenschaft kann in absoluten oder relativen Werten angegeben werden.
+    
+{% highlight css %}
+p {
+    word-spacing: 1.5em;
+}
+{% endhighlight %}
+
+### white-space (Leerzeichen)
+
+white-space regelt wie mit Abständen und Tabulatoren umgegangen werden soll.
+   
+{% highlight css %}
+p {
+    white-space: pre;
+}
+{% endhighlight %}
+
+**normal** - Wenn mehrere Leerzeichen nebeneinander stehen, wir nur eines angezeigt. Wenn nötig wird der Text bei einem Leerzeichen umgebrochen.
+
+**pre** - Der Text wird wie im `<pre>`-Tag behandelt, das heisst alle Leerzeichen werden ausgegeben.
+
+**nowrap** - Leerzeichen werden normal behandelt, aber der Text wird nicht umgebrochen.
+
+### font (Kurzschreibweise)
+
+Mit font können einzelnen Eigenschaften für Schriftformatierung zusammengefasst werden.
+
+{% highlight css %}
+p {
+    font-style:italic;
+    font-variant:small-caps;
+    font-weight:bold;
+    font-size:1.2em;
+    line-height:2em;
+    font-family:Arial, sans-serif;
+}
+{% endhighlight %}
+
+Alle dieses Eigenschaften können so abgekürzt werden:
+
+{% highlight css %}
+p {
+    font: italic small-caps bold 1.2em/2em Arial, sans-serif;
+}
+{% endhighlight %}
+
+Wird eine Eigenschaft nicht gesetzt, wird der Standardwert für die jeweilige Eigenschaft verwendet. Um `line-height` zu definieren, muss unbedingt auch font-size definiert werden (Die Werte werden mit / getrennt). Damit `font` überhaupt verwendet werden kann müssen zumindest die Werte `fontsize`/`line-height` und `font-family` angegeben werden.

@@ -42,6 +42,10 @@
 									Box-Modell
 								</a></li>
 							
+								<li><a href="/skriptum//htmlcss/css3/">
+									CSS3
+								</a></li>
+							
 								<li><a href="/skriptum//htmlcss/darstellung/">
 									Darstellung/Sichtbarkeit
 								</a></li>
@@ -56,6 +60,10 @@
 							
 								<li><a href="/skriptum//htmlcss/listen/">
 									Listen
+								</a></li>
+							
+								<li><a href="/skriptum//htmlcss/position/">
+									Positionierung
 								</a></li>
 							
 								<li><a href="/skriptum//htmlcss/pseudoklassen/">
@@ -209,6 +217,81 @@
 <p><strong>Multiplikator</strong> - Die Zeilenhöhe ergibt sich auch Schriftgröße mal Multiplikator</p>
 
 <p><strong>Numerische/Prozentuale Angabe</strong> - Entweder in px/em oder Prozent </p>
+
+<h3 id="text-align-textausrichtung">text-align (Textausrichtung)</h3>
+
+<p>text-align gibt die Ausrichtung des Inhalts eines Elements an.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span>
+    <span class="k">text-align</span><span class="o">:</span> <span class="k">right</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p><strong>left</strong> - Linkbündiger Text</p>
+
+<p><strong>right</strong> - Rechtsbündiger Text</p>
+
+<p><strong>center</strong> - Zentrierter Text</p>
+
+<p><strong>justify</strong> - Blocksatz</p>
+
+<h3 id="font-variant-schriftvariante">font-variant (Schriftvariante)</h3>
+
+<p>Mit font-variant stellt man eine Schrift normal (normal) oder in Kapitälchen (small-caps) dar.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">h1</span> <span class="p">{</span>
+  <span class="k">font-variant</span><span class="o">:</span> <span class="k">small-caps</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="letter-spacing-buchstabenabstand">letter-spacing (Buchstabenabstand)</h3>
+
+<p>Abstände zwischen Zeichen. Diese Eigenschaft kann in absoluten oder relativen Werten angegeben werden.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span>
+  <span class="k">letter-spacing</span><span class="o">:</span> <span class="m">1.5em</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="word-spacing-wortabstand">word-spacing (Wortabstand)</h3>
+
+<p>Abstände zwischen Wörtern. Diese Eigenschaft kann in absoluten oder relativen Werten angegeben werden.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span>
+    <span class="k">word-spacing</span><span class="o">:</span> <span class="m">1.5em</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="white-space-leerzeichen">white-space (Leerzeichen)</h3>
+
+<p>white-space regelt wie mit Abständen und Tabulatoren umgegangen werden soll.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span>
+    <span class="k">white-space</span><span class="o">:</span> <span class="n">pre</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p><strong>normal</strong> - Wenn mehrere Leerzeichen nebeneinander stehen, wir nur eines angezeigt. Wenn nötig wird der Text bei einem Leerzeichen umgebrochen.</p>
+
+<p><strong>pre</strong> - Der Text wird wie im <code>&lt;pre&gt;</code>-Tag behandelt, das heisst alle Leerzeichen werden ausgegeben.</p>
+
+<p><strong>nowrap</strong> - Leerzeichen werden normal behandelt, aber der Text wird nicht umgebrochen.</p>
+
+<h3 id="font-kurzschreibweise">font (Kurzschreibweise)</h3>
+
+<p>Mit font können einzelnen Eigenschaften für Schriftformatierung zusammengefasst werden.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span>
+    <span class="k">font-style</span><span class="o">:</span><span class="k">italic</span><span class="p">;</span>
+    <span class="k">font-variant</span><span class="o">:</span><span class="k">small-caps</span><span class="p">;</span>
+    <span class="k">font-weight</span><span class="o">:</span><span class="k">bold</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="o">:</span><span class="m">1.2em</span><span class="p">;</span>
+    <span class="k">line-height</span><span class="o">:</span><span class="m">2em</span><span class="p">;</span>
+    <span class="k">font-family</span><span class="o">:</span><span class="n">Arial</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Alle dieses Eigenschaften können so abgekürzt werden:</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span>
+    <span class="k">font</span><span class="o">:</span> <span class="k">italic</span> <span class="k">small-caps</span> <span class="k">bold</span> <span class="m">1.2em</span><span class="o">/</span><span class="m">2em</span> <span class="n">Arial</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Wird eine Eigenschaft nicht gesetzt, wird der Standardwert für die jeweilige Eigenschaft verwendet. Um <code>line-height</code> zu definieren, muss unbedingt auch font-size definiert werden (Die Werte werden mit / getrennt). Damit <code>font</code> überhaupt verwendet werden kann müssen zumindest die Werte <code>fontsize</code>/<code>line-height</code> und <code>font-family</code> angegeben werden.</p>
 
 		</div>
 
