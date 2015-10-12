@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 	<meta charset="UTF-8">
-	<title>Skriptum - Listen </title>
+	<title>Skriptum - Selektoren </title>
 
 		<link rel="stylesheet" href="/skriptum/assets/style.min.css">
 </head>
@@ -95,68 +95,38 @@
 
 	<div class="row">
 		<div class="col-md-6 col-md-offset-1 col-sm-12">
-			<h2 id="listen">Listen</h2>
+			<h2 id="selektoren">Selektoren</h2>
 
-<h3 id="list-style-type-art-des-aufzhlungszeichens">list-style-type (Art des Aufzählungszeichens)</h3>
+<h3 id="attributselektoren">Attributselektoren</h3>
 
-<p>Mit list-style-type wird die Art des Aufzählungszeichens bzw. der Nummerierung festgelegt.</p>
+<h4 id="efoo">E[foo]</h4>
+<p>Element besitzt Attribut</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">ul</span> <span class="p">{</span>
-  <span class="k">list-style-type</span><span class="o">:</span> <span class="k">decimal-leading-zero</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">[</span><span class="nt">src</span><span class="o">]</span> <span class="p">{</span>
+    <span class="k">border</span><span class="o">:</span> <span class="m">10px</span> <span class="k">solid</span> <span class="nb">red</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
-<p><strong>none:</strong> Kein Aufzählungszeichen</p>
+<h4 id="efoobar">E[foo=”bar”]</h4>
+<p>Attributwert entspricht mit “bar”</p>
 
-<p><strong>circle:</strong> Kreise</p>
-
-<p><strong>disc:</strong> Gefüllte Kreise (Standardwert)</p>
-
-<p><strong>square:</strong> Quadrate</p>
-
-<p><strong>decimal:</strong> Dezimal</p>
-
-<p><strong>decimal-leading-zero:</strong> Dezimal mit 0 davor</p>
-
-<p><strong>lower-alpha:</strong> Kleine Buchstaben</p>
-
-<p><strong>upper-alpha:</strong> Große Buchstaben</p>
-
-<p><strong>lower-roman:</strong> Kleine römische Ziffern</p>
-
-<p><strong>upper-roman:</strong> Große römische Ziffern</p>
-
-<h3 id="list-style-image-eigenes-aufzhlungszeichen">list-style-image (Eigenes Aufzählungszeichen)</h3>
-
-<p>Mit list-style-image kann man eigene Aufzählungszeichen definieren</p>
-
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">ul</span> <span class="p">{</span> 
-    <span class="k">list-style-image</span><span class="o">:</span> <span class="sx">url(&#39;zeichen.jpg&#39;)</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="o">]</span> <span class="p">{</span>
+    <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="nb">red</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
-<h3 id="list-style-position-positionierung-des-aufzhlungszeichens">list-style-position (Positionierung des Aufzählungszeichens)</h3>
+<h4 id="efoobar-1">E[foo~=”bar”]</h4>
+<p>bar kommt im Attributwert als eigenständiges Wort vor</p>
 
-<p>list-style-position gibt ab ob die Aufzählungszeichen innerhalb oder außerhalb des Textblocks positioniert sind.</p>
+<h4 id="efoobar-2">E[foo*=”bar”]</h4>
+<p>bar kommt im Attributwert egal wie und wo vor</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">ul</span> <span class="p">{</span> 
-  <span class="k">list-style-position</span><span class="o">:</span> <span class="k">outside</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+<h4 id="efoobar-3">E[foo^=”bar”]</h4>
+<p>Attributwert beginnt mit “bar”</p>
 
-<p><strong>outside (Standardwert):</strong> Aufzählungszeichen außerhalb des Textblockes</p>
+<h4 id="efoobar-4">E[foo$=”bar”]</h4>
+<p>Attributwert endet mit “bar”</p>
 
-<p><strong>inside:</strong> Aufzählungszeichen innerhalb des Textblockes</p>
-
-<h3 id="list-style-kurzschreibweise">list-style (Kurzschreibweise)</h3>
-
-<p>Kurzschreibweise für die Formatierung von Listen. Wird kein Wert angegeben, wird der jeweilige Standardwert genommen.</p>
-
-<p>list-style-type / list-style-position / url (‘’)</p>
-
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">ul</span> <span class="p">{</span> 
-    <span class="k">list-style</span><span class="o">:</span> <span class="k">outside</span> <span class="sx">url(&#39;zeichen.gif&#39;)</span><span class="p">;</span>
-<span class="p">}</span>
- 
-<span class="nt">ol</span> <span class="p">{</span> 
-    <span class="k">list-style</span><span class="o">:</span> <span class="k">lower-greek</span> <span class="k">inside</span><span class="p">;</span> 
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">[</span><span class="nt">href</span><span class="o">$=</span><span class="s2">&quot;.html&quot;</span><span class="o">]</span> <span class="p">{</span>
+    <span class="k">text-decoration</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 		</div>
