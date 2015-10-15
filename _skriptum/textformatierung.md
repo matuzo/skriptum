@@ -243,3 +243,21 @@ p {
 {% endhighlight %}
 
 Wird eine Eigenschaft nicht gesetzt, wird der Standardwert für die jeweilige Eigenschaft verwendet. Um `line-height` zu definieren, muss unbedingt auch font-size definiert werden (Die Werte werden mit / getrennt). Damit `font` überhaupt verwendet werden kann müssen zumindest die Werte `fontsize`/`line-height` und `font-family` angegeben werden.
+
+### text-decoration (Schriftverzierung)
+
+text-decoration dient zur Verzierung von Elementen
+   
+{% highlight css %}
+p {
+  text-decoration: underline;
+}
+{% endhighlight %}
+
+**underline** - Linien unter dem Text
+
+**overline** - Linien über dem Text
+
+**line-trough** - Text durchgestrichen
+
+**none** - Keine Linien
