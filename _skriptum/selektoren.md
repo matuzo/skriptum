@@ -6,6 +6,10 @@ permalink: /htmlcss/selektoren/
 
 ## Selektoren
 
+Liste der CSS 2.1 Selektoren: <http://www.w3.org/TR/CSS21/selector.html#pattern-matching>
+
+Liste der CSS 3 Selektoren: <http://www.w3.org/TR/css3-selectors/#selectors>
+
 ### Attributselektoren
 
 #### E[foo]
