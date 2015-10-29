@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 	<meta charset="UTF-8">
-	<title>Skriptum - Darstellung/Sichtbarkeit </title>
+	<title>Skriptum - Featuredetection </title>
 
 		<link rel="stylesheet" href="/skriptum/assets/style.min.css">
 </head>
@@ -103,61 +103,28 @@
 
 	<div class="row">
 		<div class="col-md-6 col-md-offset-1 col-sm-12">
-			<h2 id="darstellungsichtbarkeit">Darstellung/Sichtbarkeit</h2>
+			<h2 id="featuredetection-mit-mordernizr">Featuredetection mit Mordernizr</h2>
 
-<h3 id="display-anzeigemodus">display (Anzeigemodus)</h3>
+<p>Eigenen Build auf <a href="https://modernizr.com/download?setclasses">https://modernizr.com/download?setclasses</a> erstellen.</p>
 
-<p>display steuert wie ein Element dargestellt wird.</p>
+<ol>
+  <li>Features, die gecheckt werden sollen auswählen.</li>
+  <li><em>Build</em> rechts oben klicken und dann <em>Download</em>.</li>
+  <li>Generierte JS-Datei im <code>&lt;head&gt;</code> einbinden.</li>
+  <li>Feature-spezifisches CSS schreiben. z.B.:</li>
+</ol>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">span</span> <span class="p">{</span>
-    <span class="k">display</span><span class="o">:</span><span class="k">inline</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.flexbox</span> <span class="nt">header</span> <span class="p">{</span>
+    <span class="o">...</span>
+<span class="p">}</span>    
+
+<span class="nc">.no-flexbox</span> <span class="nt">header</span> <span class="p">{</span>
+    <span class="o">...</span>
 <span class="p">}</span></code></pre></div>
 
-<p><strong>none</strong> - Das Element wird nicht dargestellt und es wird auch kein Platz auf der Seite freigehalten. Es verhält sich als ob es nicht existiert.</p>
+<h3 id="no-js">no-js</h3>
 
-<p><strong>block</strong> - Das Element verhält sich wie ein Blocklevelelement</p>
-
-<p><strong>inline</strong> - Das Element verhält sich wie ein Inlineelement</p>
-
-<p><strong>inline-block</strong> - Mischung aus inline und block. Man kann uneingeschränkt width, height, padding und margin vergeben. Element erzeugt aber keinen Zeilenumbruch.</p>
-
-<p>Weitere: <a href="http://www.css4you.de/display.html">http://www.css4you.de/display.html</a></p>
-
-<h3 id="visibility-sichtbarkeit">visibility (Sichtbarkeit)</h3>
-
-<p>Mit Visibilty kann die Sichtbarkeit eines Elements gesteuert werden. Wird es ausgeblendet, ist es auf der Seite immer noch vorhanden, wird aber nicht angezeigt. </p>
-
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">visibility</span><span class="o">:</span><span class="k">hidden</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
-
-<p><strong>visible (Standartwert)</strong> - Element befindet sich auf der Seite und wird angezeigt</p>
-
-<p><strong>hidden</strong> - Element befindet sich auf der Seite, wird aber nicht angezeigt</p>
-
-<h3 id="opacity-deckkraft">opacity (Deckkraft)</h3>
-
-<p>opacity steuert die Deckkraft eines Elements (Werte 0-1)</p>
-
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">opacity</span><span class="o">:</span><span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
-
-<h3 id="overflow-berschuss">overflow (Überschuss)</h3>
-
-<p>overflow gibt an was mit Inhalten passiert, die nicht in den Anzeigebereich passen</p>
-
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">overflow</span><span class="o">:</span><span class="k">visible</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
-
-<p><strong>visible (Standardwert)</strong> - Überschüssige Elemente sind sichtbar</p>
-
-<p><strong>hidden</strong> - Überschüssige Elemente werden nicht angezeigt</p>
-
-<p><strong>auto</strong> - Überschüssige Elemente werden je nach Gegebenheit automatisch behandelt</p>
-
-<p><strong>scroll</strong> - Es werden immer Scrollbalken bzw. ein Platzhalter für Scrollbalken angezeigt</p>
+<p>Soll JS gecheckt werden, muss man zuerst dem <code>html</code>-Element die Klasse <code>no-js</code> vergeben. Mordernizr ändert diese automatisch zu <code>js</code>, wenn Javascript aktiv ist.</p>
 
 		</div>
 

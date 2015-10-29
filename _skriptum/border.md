@@ -3,7 +3,7 @@ layout: skriptum
 title: Rahmen
 permalink: /htmlcss/border/
 ---
-
+ 
 ## Rahmen
 
 ### border-width (Rahmenbreite)
